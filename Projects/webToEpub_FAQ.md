@@ -1,19 +1,12 @@
 # WebToEpub Frequently Asked Questions
 
-- [Privacy Policy](#privacy-policy)
+- [Privacy Policy](webToEpub_PrivacyPolicy.html)
 - [How to select a sub-range of URLs to include in an EPUB?](#url-subrange)
 - [How to convert a new site using the Default Parser?](#default-parser)
 - [How to see file downloading progress?](#download-progress)
 - [Using Baka-Tsuki "Series Page" parser?](#baka-tsuki-series-page)
 - [How to write a new Parser?](#write-parser)
 - [Structure of WebToEpub code?](#code-structure)
-
-<h2 id="privacy-policy">Privacy Policy</h2>
-WebToEpub potentially exposes some of your web browsing history.
-Specifically:
-1. The EPUB files it creates record the URLs the content used to create the EPUB came from.  This is done so that if you wish to update the EPUB manually, you know where all the content came from.
-2. When the Default Parser is used to create an EPUB, WebToEpub records the site's host name. This is so it can configure the Default Browser should you want to create another EPUB from the site.
-3. As WebToEpub is hosted inside a Firefox or Chrome web browser, the browser itself (depending on your settings) may record your browsing history, or do anything else.
 
 <h2 id="url-subrange">How to select a sub-range of URLs to include in an EPUB?</h2>
 1. Click on the "Edit Chapter URLs" button.
