@@ -9,12 +9,46 @@
 - [Structure of WebToEpub code?](#code-structure)
 
 <h2 id="url-subrange">How to select a sub-range of URLs to include in an EPUB?</h2>
-1. Click on the "Edit Chapter URLs" button.
-2. Edit the hyperlinks. e.g. Delete the URLs that are not wanted. Note, you can copy and paste the hyperlinks to and from a text editor.
-3. Click the "Apply Changes" button.
+1. Make sure all the URLs you want in the EPUB are selected.  (Easiest way to do this is click on the "Select All" button, which will select ALL URLs.)
+2. Click on the "Edit Chapter URLs" button.
+3. A text editor with a list of hyperlinks, one hyperlink for each selected URL will open.  Each hyperlink looks like this:
+```HTML
+<a href="URL_TO_DOWNLOAD">Title</a>
+```
+Where href is the URL to obtain a chapter to put in the EPUB, and "Title" is the title that will be given to the chapter in the table of contents.
+The chapters will be placed in the EPUB in the same order they appear on this page.
+4. Edit the hyperlinks. e.g. Delete the URLs that are not wanted. You can also change the order of the hyperlinks or their titles. Note, you may find it easier to copy/paste the hyperlinks into a text editor to modify them, then paste back the edited list.
+5. Click the "Apply Changes" button.
 
 <h2 id="default-parser">How to convert a new site using the Default Parser?</h2>
-ToDo
+<ol>
+<li>The first step is to discover the <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">HTML element</a> that contains the content to put into each chapter of the EPUB.  To do this 
+  <ol>
+  <li>Open a chapter URL in your web browser of choice.</li>
+  <li>Open the browser's DOM Inspector.  E.g. On Firefox use <a href="https://developer.mozilla.org/en-US/docs/Tools/Add-ons/DOM_Inspector/Introduction_to_DOM_Inspector">CTRL+Shift+C</a>, on Chrome open <a href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/edit-dom">"Developer Tools" and select the "Elements" tab</a></li>
+  <li>Find the HTML element that encloses the entire text your want in the EPUB and record the element's:
+    <ul>
+    <li>Type (e.g. &lt;Body&gt;, &lt;Div&gt;, &lt;Article&gt;),</li>
+    <li>id (if there is one.)  If there's no ID, check the </li>
+    <li>class (if there is one.)  Note, multiple elements may have the same class, so, you need to check that the class is unique.  If class is not unique, then search the element's parents for one with an id or unique class.</li>
+    </ul>
+  </li>
+  </ol>
+</li>
+<li>Open the web page with the list of URLs that are the chapters to pack into the EPUB.</li>
+<li>Click on WebToEpub's icon to open WebToEpub.</li>
+<li>You will get a warning message that Default parser will be used. Click OK and WebToEpub will open.</li>
+<li>Above the "Pack EPUB" button, there's a line titled "Element with Chapter Content" with two drop down controls and an edit box.  Set these controls to the content element you found in the first step.  e.g. Assume in step 1 you found that the content was in a &lt;Div&gt; element with a class name of "post-body".  In that case you would
+  <ol>
+  <li>Set the first drop down to &lt;Div&gt;.</li>
+  <li>Set the second drop down to "Class is".</li>
+  <li>Set the edit box to "post-body" (Don't include the quotes.)</li>
+  </ol>
+</li>
+<li>In the list of chapters to fetch, uncheck the chapters you don't want. (The default parser will show every hyperlink it finds on the page.)</li>
+<li>(Optional) Set "Cover Image URL:" to a suitable image.</li>
+<li>Click "Pack epub"</li>
+</ol>
 
 <h2 id="download-progress">How to see file downloading progress?</h2>
 WebToEpub's display of progress in downloading the requested URLs is limited.  
