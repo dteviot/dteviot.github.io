@@ -77,11 +77,9 @@ Basic steps are:
 1. Install from Source, using the [instructions here](https://github.com/dteviot/WebToEpub#how-to-install-from-source)
 2. Copy the file "Template.js" in the folder plugin/js/parsers.
 3. Rename the copied file, based on the site you want to parse.
-4. Add link to the new parser to popup.html.
+4. Add link to the new file to popup.html.
 5. Text replace "Template" in the file with the new Parser name.
-6. Uncomment the functions of the template you need, modifying the sample implementations as required.
-
-ToDo: provide worked example of creating a new parser.
+6. Uncomment the functions of the template you need, modifying the sample implementations as required.  Refer to [Customizing the Template Parser for a new Web Site](webToEpub_CustomizingParserTemplate.html) for a worked example
 
 <h2 id="code-structure">Structure of WebToEpub code?</h2>
 ToDo
