@@ -6,7 +6,7 @@
 - [How to see file downloading progress?](#download-progress)
 - [Using Baka-Tsuki "Series Page" parser?](#baka-tsuki-series-page)
 - [How to write a new Parser?](#write-parser)
-- [Structure of WebToEpub code?](#code-structure)
+- [Structure of WebToEpub code?](webToEpub_CodeStructure.html)
 
 <h2 id="url-subrange">How to select a sub-range of URLs to include in an EPUB?</h2>
 1. Make sure all the URLs you want in the EPUB are selected.  (Easiest way to do this is click on the "Select All" button, which will select ALL URLs.)
@@ -80,7 +80,4 @@ Basic steps are:
 4. Add link to the new file to popup.html.
 5. Text replace "Template" in the file with the new Parser name.
 6. Uncomment the functions of the template you need, modifying the sample implementations as required.  Refer to [Customizing the Template Parser for a new Web Site](webToEpub_CustomizingParserTemplate.html) for a worked example
-
-<h2 id="code-structure">Structure of WebToEpub code?</h2>
-ToDo
 
