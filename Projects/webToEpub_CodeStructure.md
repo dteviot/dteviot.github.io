@@ -2,7 +2,7 @@
 
 ## Overview of Files
 * popup.html and js/main.js provide WebToEpub's core UI.
-  * js/ChapterUrls.js, js/CoverImageUI.js, js/ProgressBar.js and js/UserPreferences.js provide the rest of the UI functionality.
+  * js/ChapterUrls.js, js/CoverImageUI.js, js/DefaultParserUI.js, js/ProgressBar.js and js/UserPreferences.js provide the rest of the UI functionality.
 * js/ParserFactory.js selects the Parser (derived from js/Parser.js) to use to process each web page. 
   * js/ImageColletor.js (and js/Imgur.js) are used by the Parsers to handle processing images from the web page.
   * js/HttpClient.js is used to fetch web pages (and images, JSON or anything else) from the internet.
@@ -20,6 +20,7 @@
 <tr><td>js/main.js</td><td>Main logic behind popup.html's UI</td></tr>
 <tr><td>js/ChapterUrlsUi.js</td><td>Logic for the "List of Chapters" on the UI</td></tr>
 <tr><td>js/CoverImageUI.js</td><td>Logic for the "Select Cover Image" list for Baka-Tsuki on the UI</td></tr>
+<tr><td>js/DefaultParserUI.js</td><td>Logic for the "Default Parser" on the UI</td></tr>
 <tr><td>js/Download.js</td><td>Wraps Chrome's Download API.  (Handles saving EPUB to hard drive.)</td></tr>
 <tr><td>js/EpubItem.js</td><td>An item to pack into an EPUB file. (e.g. an XHTML or image file)</td></tr>
 <tr><td>js/EpubItemSupplier.js</td><td>Converts "files" from internet into EpubItems to pack into an EPUB</td></tr>
@@ -33,6 +34,7 @@
 <tr><td>js/Parser.js</td><td>Base class for reading a site's HTML and converting into EpubItems</td></tr>
 <tr><td>js/ParserFactory.js</td><td>Logic to figure out which parser to use for a web page</td></tr>
 <tr><td>js/ProgressBar.js</td><td>Code to manipulate the Progress Bar on the UI</td></tr>
+<tr><td>js/Sanitize.js</td><td>Code to cleanup converting HTML to XHMTL</td></tr>
 <tr><td>js/UserPreferences.js</td><td>UI logic for user to set Options</td></tr>
 <tr><td>js/Util.js</td><td>Library of miscellaneous functions</td></tr>
 </table>
