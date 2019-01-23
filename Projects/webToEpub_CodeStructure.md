@@ -83,7 +83,7 @@ ToDo - include special case of EPUB that has multiple sites with different forma
 <tr><td>Site does not use UTF8 encoding or inform of coding used</td><td>69shu</td></tr>
 <tr><td>Each chapter spans multiple HTML pages</td><td>AsianHobbyist</td></tr>
 <tr><td>Chapters "links" in Table of Contents (ToC) are not hyperlinks</td><td>ArchiveOfOurOwn</td></tr>
-<tr><td>Walk multiple ToC pages to get all Chapters</td><td>BabelChain</td></tr>
+<tr><td>Walk multiple ToC pages to get all Chapters</td><td>BabelChain, Scribblehub</td></tr>
 <tr><td>ToC requires REST call(s) to list all chapters</td><td>GravityTales, Lnmtl</td></tr>
 <tr><td>ToC across multiple HTML pages</td><td>AsianHobbyist, Novelfull, Shinsori, ZenithNovels</td></tr>
 </table>
