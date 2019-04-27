@@ -17,7 +17,7 @@ WebToEpub does NOT collect any "Personal Information".  Where personal informati
 
 Obviously, as Personal information is not collected, it's also not used, stored or passed on to anyone.
 
-Note, while WebToEpub does not obtain this information (or ask your for it), it is theoretically possible you could put this information into an EPUB it creates.  For example, you could tell WebToEpub to use your credit card number as the file name to save the EPUB as.  If you're doing stupid things like that.  STOP DOING THEM!
+Note, while WebToEpub does not obtain this information (or ask you for it), it is theoretically possible you could put this information into an EPUB it creates.  For example, you could tell WebToEpub to use your credit card number as the file name to save the EPUB as.  If you're doing stupid things like that.  STOP DOING THEM!
 
 ### Information Collection and Use
 The whole purpose of WebToEpub is to obtain content from the Internet and write it to a local EPUB file.
@@ -28,8 +28,14 @@ In addition to the content, the EPUB file also contains the URL(s) the content c
 However, as WebToEpub is hosted inside a Web Browser (e.g. Chrome) WebToEpub has no control over what Chrome does with your URLs.
 Of course, the Web Browser would be doing this anyway (if WebToEpub was not present.) If that concerns you, use Firefox.
 
-In addition to the above, if you use the WebToEpub's Default Parser to process a site (and WebToEpub will tell you when it's doing that) WebToEpub records the site's host name. This is so it can configure the Default Browser should you want to create another EPUB from the site.
+In addition to the above, if you use WebToEpub's Default Parser to process a site (and WebToEpub will tell you when it's doing that) WebToEpub records the site's host name. This is so it can configure the Default Browser should you want to create another EPUB from the site.
 Note, this isn't that much different from the Web Browser recording your history.  If this is a concern, send me an email (see section "Contact Privacy Officer" below for contact details.)
+
+In addition to the above, as of build 0.0.0.71 a "Reading List" has been added to WebToEpub.
+What this does is: when asked, record web sites so you can easily revisit them later to see if there's new content.
+Obviously, if you tell WebToEpub to record a site, its going to store the URL of the web site.
+This information is stored on the local PC, and again isn't that much different from the Web Browser recording your history.
+If this is a concern, DON'T add any sites to the Reading List.  WebToEpub will only add sites when requested.
 
 ### Log Data
 WebToEpub does not have a log file.
