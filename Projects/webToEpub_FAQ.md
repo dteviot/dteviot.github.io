@@ -7,6 +7,9 @@
 - [Using Baka-Tsuki "Series Page" parser?](#baka-tsuki-series-page)
 - [How to write a new Parser?](#write-parser)
 - [Structure of WebToEpub code?](webToEpub_CodeStructure.html)
+- [Support latest Firefox for Android](#android)
+- [Add ability to reduce speed that WbeToEpub fetches pages](#rate-limit)
+- [Please add support for getting chapter list from NovelUpdates](#novelupdates)
 
 <h2 id="url-subrange">How to select a sub-range of URLs to include in an EPUB?</h2>
 1. Make sure all the URLs you want in the EPUB are selected.  (Easiest way to do this is click on the "Select All" button, which will select ALL URLs.)
@@ -51,3 +54,16 @@ Basic steps are:
 5. Text replace "Template" in the file with the new Parser name.
 6. Uncomment the functions of the template you need, modifying the sample implementations as required.  Refer to [Customizing the Template Parser for a new Web Site](webToEpub_CustomizingParserTemplate.html) for a worked example
 
+<h2 id="android">Support latest Firefox for Android</h2>
+At time of writing (2021-01-14), WebToEpub did not work with latest version of Firefox for Android.
+This is because Mozilla decided that extensions are too big a security risk. They changed the Standard version of Firefox for Android so it no longer support extentions. Except for a small number that Mozilla hand verified.
+To run extensions, you need to run the Nightly version of Firefox for Android.
+
+<h2 id="rate-limit">Add ability to reduce speed that WbeToEpub fetches pages</h2>
+A couple of sites do rate limiting.  That is, when they detect a browser making a lot of calls quickly, they tell the broswer to slow down.
+Providied the site responds with HTTP 429 messagtes, WebToEpub will slow down as requested.
+However, you can also reduce WebToEpub's request rate by throttling using opening the Browser's Object inspector and throttling the internet speed.
+This may give better overall performance than relying on the 429 backoff.
+
+<h2 id="novelupdates">Please add support for getting chapter list from NovelUpdates</h2>
+The NovelUpdate site owners have told me not to do this.  So, sorry, I can't do this.
