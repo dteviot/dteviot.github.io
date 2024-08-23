@@ -84,7 +84,9 @@ ToDo - include special case of EPUB that has multiple sites with different forma
 <tr><td>Each chapter spans multiple HTML pages</td><td><a href="https://github.com/dteviot/WebToEpub/blob/ExperimentalTabMode/plugin/js/parsers/YushuboParser.js">YushuboParser.js</a></td></tr>
 <tr><td>Chapters "links" in Table of Contents (ToC) are not hyperlinks</td><td>ArchiveOfOurOwn</td></tr>
 <tr><td>Walk multiple ToC pages to get all Chapters</td><td>BabelChain, Scribblehub</td></tr>
+<tr><td>Make multiple REST calls to get all ToC "pages" for all Chapters</td><td>Novelsect</td></tr>
 <tr><td>ToC requires REST call(s) to list all chapters</td><td>GravityTales, Lnmtl</td></tr>
 <tr><td>ToC across multiple HTML pages</td><td>AsianHobbyist, Novelfull, Shinsori, ZenithNovels</td></tr>
+<tr><td>Assemble chapter content from JSON</td><td>Novelsect</td></tr>
 </table>
 
